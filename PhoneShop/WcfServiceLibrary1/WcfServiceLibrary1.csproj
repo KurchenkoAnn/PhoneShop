@@ -47,8 +47,11 @@
     <Compile Include="Contracts\IUser.cs" />
     <Compile Include="Contracts\IOrder.cs" />
     <Compile Include="Contracts\IPhone.cs" />
-    <Compile Include="Models\C.cs" />
+    <Compile Include="OrderDTO.cs" />
+    <Compile Include="PhoneDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Context.cs" />
+    <Compile Include="UserDTO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

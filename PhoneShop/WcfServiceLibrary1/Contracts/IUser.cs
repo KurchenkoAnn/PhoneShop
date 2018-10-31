@@ -10,6 +10,8 @@ namespace WcfServiceLibrary1.Contracts
     [ServiceContract]
     public interface IUser
     {
-
+        [OperationContract]
+        List<UserDTO> GetUser();
+     
     }
 }

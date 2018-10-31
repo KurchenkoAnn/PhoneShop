@@ -10,6 +10,10 @@ namespace WcfServiceLibrary1.Contracts
     [ServiceContract]
     public  interface IPhone
     {
+        [OperationContract]
+        List<PhoneDTO>GetPhone();
+       
+
 
     }
 }

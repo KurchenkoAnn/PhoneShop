@@ -10,7 +10,8 @@ namespace WcfServiceLibrary1.Contracts
     [ServiceContract]
 public  interface IOrder
     {
-        
-
+        [OperationContract]
+        List<OrderDTO> GetOrder();
+      
     }
 }
