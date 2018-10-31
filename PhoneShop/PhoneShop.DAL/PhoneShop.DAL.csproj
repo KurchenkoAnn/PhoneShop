@@ -50,6 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201810311415393_migr1.cs" />
+    <Compile Include="Migrations\201810311415393_migr1.Designer.cs">
+      <DependentUpon>201810311415393_migr1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model1.cs" />
     <Compile Include="models\Order.cs" />
     <Compile Include="models\Phone.cs" />
@@ -60,6 +65,10 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201810311415393_migr1.resx">
+      <DependentUpon>201810311415393_migr1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,5 +11,6 @@ namespace PhoneShop.DAL.models
         public int ID { get; set; }
         public string Model { get; set; }
         public string Producer{ get; set; }
+        public decimal Price { get; set; }
     }
 }
