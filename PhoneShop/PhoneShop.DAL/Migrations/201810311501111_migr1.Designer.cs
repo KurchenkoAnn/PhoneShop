@@ -13,7 +13,7 @@ namespace PhoneShop.DAL.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201810311415393_migr1"; }
+            get { return "201810311501111_migr1"; }
         }
         
         string IMigrationMetadata.Source
