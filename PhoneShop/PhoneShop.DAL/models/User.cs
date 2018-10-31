@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PhoneShop.DAL
+namespace PhoneShop.DAL.models
 {
-    public class Class1
+    public class User
     {
+        public int ID { get; set; }
+        public string Name { get; set; }
     }
 }
