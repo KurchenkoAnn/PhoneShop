@@ -15,7 +15,7 @@
             </ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <ListView Grid.Column="1" Background="LightBlue" Name="LV" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+        <ListView Grid.Column="1" Background="LightBlue" Name="LV" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel HorizontalAlignment="Center" Background="LightBlue"></WrapPanel>
@@ -24,20 +24,24 @@
 
             <ListView.ItemTemplate>
                 <DataTemplate >
-                    <Border BorderBrush="LightBlue" BorderThickness="2" CornerRadius="10" Height="450" Width="250" Margin="1">
-                        <StackPanel Background="CadetBlue">
-                            <TextBlock HorizontalAlignment="Center" FontSize="18" Text="{Binding Phone.Model}"/>
-                            <TextBlock HorizontalAlignment="Center" FontSize="18" Text="{Binding Phone.Producer}"/>
+                    <Border BorderBrush="LightBlue" BorderThickness="2" CornerRadius="10" Height="150" Width="250" Margin="1">
+                        <StackPanel Background="CadetBlue" >
+                            <TextBlock HorizontalAlignment="Center" FontSize="18" Text="{Binding Model}"/>
+                            <TextBlock HorizontalAlignment="Center" FontSize="18" Text="{Binding Producer}"/>
                             <TextBlock HorizontalAlignment="Center" FontSize="20" Text="{Binding Price,StringFormat={}{0} GRN }"/>
+
                         </StackPanel>
+
                     </Border>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
         <StackPanel Background="LightBlue">
-       
-            <TextBox Height="30" Background="LightBlue" BorderBrush="LightSkyBlue" Text="{Binding User.Email}" Margin="3"/>
+
+            <TextBox Name="NameT" Height="30" Background="LightBlue" BorderBrush="LightSkyBlue" Text="{Binding Name}" Margin="3"/>
+            <TextBox Name="EmailT" Height="30" Background="LightBlue" BorderBrush="LightSkyBlue" Text="{Binding Email}" Margin="3"/>
             <Button Width="70" HorizontalAlignment="Right" BorderBrush="LightSkyBlue" Margin="3" Background="Lavender" Click="Button_Click"/>
         </StackPanel>
+        <Button Name="j" Opacity="0" Background="AliceBlue"  IsEnabled="False" Click="bob_Click" Height="25" Width="50" HorizontalAlignment="Right" Margin="0,340,56,55" Grid.Column="1" />
     </Grid>
 </Controls:MetroWindow>

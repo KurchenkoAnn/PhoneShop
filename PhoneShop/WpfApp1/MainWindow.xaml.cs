@@ -26,17 +26,45 @@ namespace WpfApp1
         List<OrderUI> o = new List<OrderUI>();
         List<PhoneUI> p = new List<PhoneUI>();
 
+
+
         public MainWindow()
         {
+
+            UserUI user = new UserUI();
+            // user.Name = "gfgf";
+            // user.Email = "dfjfdf";
+            PhoneUI phone = new PhoneUI();
+            // phone.Model = "gfgf";
+            // phone.Price = 1000;
+            // phone.Producer = "Sumsung";
+
             InitializeComponent();
-            u = new List<UserUI>() { new UserUI { Name = "Vasyan", Email = "vasyanVas" } };
-            o = new List<OrderUI>() { new OrderUI {} };
-            p = new List<PhoneUI>() { new PhoneUI { Model="Samsung J3 2016",Producer="Samsung",Price=2700} };
+            //  u = new List<UserUI>() { new UserUI { Name = "Vasyan", Email = "vasyanVas" } };
+            o = new List<OrderUI>() { new OrderUI { Customer = user, Item = phone, GetOrder = DateTime.Now } };
+            p = new List<PhoneUI>() { new PhoneUI { Model = "Samsung J3 2016", Producer = "Samsung", Price = 2700 } };
+
+            LV.ItemsSource = p.ToList();
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            u.Add(new UserUI { Name = NameT.Text, Email = EmailT.Text });
+            j.Opacity = 100;
+            j.IsEnabled = true;
+        }
+
+
+        private void bob_Click(object sender, RoutedEventArgs e)
+        {
+            
+            Window2 main = new Window2(LV.SelectedItem as PhoneUI);
+            main.ShowDialog();
+
             
         }
+
+
     }
 }
