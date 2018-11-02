@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneShop.DAL", "PhoneShop.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{CA7925EF-400B-4F18-8F47-8BB68E5BC7F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceLibrary1", "WcfServiceLibrary1\WcfServiceLibrary1.csproj", "{66956C5D-8A94-47C0-9D3E-AE9F55FA53F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CA7925EF-400B-4F18-8F47-8BB68E5BC7F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA7925EF-400B-4F18-8F47-8BB68E5BC7F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA7925EF-400B-4F18-8F47-8BB68E5BC7F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66956C5D-8A94-47C0-9D3E-AE9F55FA53F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66956C5D-8A94-47C0-9D3E-AE9F55FA53F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66956C5D-8A94-47C0-9D3E-AE9F55FA53F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66956C5D-8A94-47C0-9D3E-AE9F55FA53F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
