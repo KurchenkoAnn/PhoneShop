@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -44,9 +45,11 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IEmail.cs" />
     <Compile Include="Contracts\IUser.cs" />
     <Compile Include="Contracts\IOrder.cs" />
     <Compile Include="Contracts\IPhone.cs" />
+    <Compile Include="EmailDTO.cs" />
     <Compile Include="OrderDTO.cs" />
     <Compile Include="PhoneDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -54,7 +57,9 @@
     <Compile Include="UserDTO.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

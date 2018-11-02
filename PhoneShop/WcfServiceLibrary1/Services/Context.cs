@@ -5,9 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using WcfServiceLibrary1.Contracts;
 
+using System.Net.Mail;
+using System.Net;
+
 namespace WcfServiceLibrary1.Services
 {
-    class Context : IOrder, IPhone, IUser
+    class Context : IOrder, IPhone, IUser,IEmail
     {
         public List<OrderDTO> GetOrder()
         {
@@ -24,15 +27,34 @@ namespace WcfServiceLibrary1.Services
 
         public List<PhoneDTO> GetPhone()
         {
-            List<PhoneDTO> p = new List<PhoneDTO>() { new PhoneDTO { Model = "Samsung govno", Producer = "China", Price = 5 } };
+            List<PhoneDTO> p = new List<PhoneDTO>() { new PhoneDTO { Model = "Samsung govno", Producer = "Sumsung", Price = 5 } };
             return p;
         }
 
         public List<UserDTO> GetUser()
         {
-            List<UserDTO> s = new List<UserDTO>(){ new UserDTO { Email = "dfd", Name = "dfds" }};
+            List<UserDTO> s = new List<UserDTO>(){ new UserDTO { Email = "d", Name = "vAsyan" }};
 
             return s;
         }
+
+        SmtpClient smtpClient = new SmtpClient();
+        public void SendOnEmail(string subject, string Messege, UserDTO user)
+        {
+            smtpClient = new SmtpClient("smtp.gmail.com", 587);
+            smtpClient.Credentials = new NetworkCredential(@"GovnoMagaz@gmail.com", "okun1234");
+            MailAddress mailAddress = new MailAddress(@"GovnoMagaz@gmail.com");
+            MailMessage m = new MailMessage();
+            m.From = mailAddress;
+            m.To.Add(user.Email);
+            m.Subject = subject;
+            m.Body = Messege;
+            smtpClient.EnableSsl = true;
+            smtpClient.Send(m);
+
+
+        }
+
+       
     }
 }
