@@ -5,14 +5,14 @@ namespace PhoneShop.DAL.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<PhoneShop.DAL.Model1>
+    internal sealed class Configuration : DbMigrationsConfiguration<PhoneShop.DAL.PhoneContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(PhoneShop.DAL.Model1 context)
+        protected override void Seed(PhoneShop.DAL.PhoneContext context)
         {
             //  This method will be called after migrating to the latest version.
 

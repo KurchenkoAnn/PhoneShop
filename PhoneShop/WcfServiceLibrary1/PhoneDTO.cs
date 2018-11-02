@@ -18,6 +18,6 @@ namespace WcfServiceLibrary1
         [DataMember]
         public string Producer { get; set; }
         [DataMember]
-        public int Price { get; set; }
+        public decimal Price { get; set; }
     }
 }

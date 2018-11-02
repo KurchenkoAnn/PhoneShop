@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp1.Models;
+using WpfApp1.PhoneService;
 
 namespace WpfApp1
 {
@@ -31,18 +32,32 @@ namespace WpfApp1
         public MainWindow()
         {
 
-            UserUI user = new UserUI();
+            //UserUI user = new UserUI();
             // user.Name = "gfgf";
             // user.Email = "dfjfdf";
-            PhoneUI phone = new PhoneUI();
+            //*PhoneUI phone = new PhoneUI();
             // phone.Model = "gfgf";
             // phone.Price = 1000;
             // phone.Producer = "Sumsung";
 
             InitializeComponent();
             //  u = new List<UserUI>() { new UserUI { Name = "Vasyan", Email = "vasyanVas" } };
-            o = new List<OrderUI>() { new OrderUI { Customer = user, Item = phone, GetOrder = DateTime.Now } };
-            p = new List<PhoneUI>() { new PhoneUI { Model = "Samsung J3 2016", Producer = "Samsung", Price = 2700 } };
+            //o = new List<OrderUI>() { new OrderUI { Customer = user, Item = phone, GetOrder = DateTime.Now } };
+
+
+            PhoneClient phoneClient = new PhoneClient();
+            foreach(var item in  phoneClient.GetPhone())
+            {
+                PhoneUI phone = new PhoneUI
+                {
+                    ID = item.ID,
+                    Model = item.Model,
+                    Price = item.Price,
+                    Producer = item.Producer
+                };
+                p.Add(phone);
+
+            }
 
             LV.ItemsSource = p.ToList();
 
